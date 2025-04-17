@@ -63,8 +63,8 @@ public class bst<T extends Comparable<T>> {
         return false;
     }
 
-    public boolean remove(T item) {
-        return false;
+    public boolean remove(T itemToRemove) {
+        return true;
     }
 
     
