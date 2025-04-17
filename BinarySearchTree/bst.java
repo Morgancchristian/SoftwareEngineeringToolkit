@@ -43,6 +43,30 @@ public class bst<T extends Comparable<T>> {
         return true;
     }
 
+    public boolean searchFor(T itemToSearchFor) {
+        
+        if (root == null) {
+            return false;
+        }
+
+        treeNode<T> current = root;
+
+        while (current != null) {
+            if (itemToSearchFor.compareTo(current.getItem()) < 0) {
+                current = current.getLeftTreeNode();
+            } else if (itemToSearchFor.compareTo(current.getItem()) > 0) {
+                current = current.getRightTreeNode();
+            } else if (itemToSearchFor.compareTo(current.getItem()) == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean remove(T item) {
+        return false;
+    }
+
     
 
 
