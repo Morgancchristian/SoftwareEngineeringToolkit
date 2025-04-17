@@ -14,6 +14,8 @@ public class bst<T extends Comparable<T>> {
         
         if (root == null) {
             root = newNode;
+            size++;
+            return true;
         }
 
         treeNode<T> parent = null;
