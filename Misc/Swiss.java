@@ -1,4 +1,4 @@
-package SoftwareEngineeringToolkit.Misc;
+
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ public class Swiss {
 
             for (int j = 0; j < item.length(); j++) {
                 arrayList.add(item.trim().charAt(j));
-            } 
+            }
         }
         return arrayList;
    }
@@ -23,7 +23,7 @@ public class Swiss {
         ArrayList<Character> newArrayList = new ArrayList<>();
         for (int i = 0; i < arrayList.size(); i++) {
                 char elem = arrayList.get(i);
-                
+
                 switch (elem) {
                     case 'a':
                         newArrayList.add(elem);
@@ -72,7 +72,7 @@ public class Swiss {
                         break;
                     case 'p':
                         newArrayList.add(elem);
-                        break;                    
+                        break;
                     case 'q':
                         newArrayList.add(elem);
                         break;
@@ -111,9 +111,9 @@ public class Swiss {
     }
 
     public boolean palindrome(ArrayList<Character> sequenceToTest) {
-        
+
         ArrayList<Character> sequenceReversed = new ArrayList<>();
-        
+
         Stack<Character> stack = new Stack<>();
         for (Character elem : sequenceToTest) {
             stack.push(elem);
@@ -142,7 +142,7 @@ public class Swiss {
                     break;
                 case '1':
                     break;
-                case '2': 
+                case '2':
                     break;
                 case '3':
                     break;
@@ -180,21 +180,21 @@ public class Swiss {
 
     public long convertDecimalToOctal(long numToConvert) {
         long octal = 0;
-        int place = 1;  
-        
+        int place = 1;
+
         while (numToConvert > 0) {
             long remainder = numToConvert % 8;
             octal += remainder * place;
             numToConvert /= 8;
-            place *= 10;  
+            place *= 10;
         }
         return octal;
     }
 
     public static void main(String[] args) {
         Swiss swiss = new Swiss();
-        
-        // Testing parseArgument 
+
+        // Testing parseArgument
         ArrayList<Character> test = swiss.parseArgument(args);
         for (Character item : test) {
             System.out.print(item);

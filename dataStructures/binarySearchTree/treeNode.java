@@ -1,4 +1,4 @@
-package SoftwareEngineeringToolkit.BinarySearchTree;
+
 
 public class treeNode<T> {
     private T item;
@@ -40,5 +40,5 @@ public class treeNode<T> {
     public void setRightTreeNode(treeNode<T> rightNode) {
         this.rightTreeNode = rightNode;
     }
-    
+
 }

@@ -1,6 +1,7 @@
-package SoftwareEngineeringToolkit.BinarySearchTree;
+package dataStructures.binarySearchTree;
 
 public class bst<T extends Comparable<T>> {
+
     private treeNode<T> root;
     private int size;
 
@@ -9,9 +10,8 @@ public class bst<T extends Comparable<T>> {
     }
 
     public boolean instert(T itemToInsert) {
-        
         treeNode<T> newNode = new treeNode<>(itemToInsert);
-        
+
         if (root == null) {
             root = newNode;
             size++;
@@ -44,7 +44,6 @@ public class bst<T extends Comparable<T>> {
     }
 
     public boolean searchFor(T itemToSearchFor) {
-        
         if (root == null) {
             return false;
         }
@@ -66,9 +65,4 @@ public class bst<T extends Comparable<T>> {
     public boolean remove(T itemToRemove) {
         return true;
     }
-
-    
-
-
-    
 }

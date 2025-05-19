@@ -1,4 +1,4 @@
-package SoftwareEngineeringToolkit.BinarySearchTree;
+
 
 public interface bstInterface<T> {
 
@@ -17,5 +17,5 @@ public interface bstInterface<T> {
     public T postfixTraversal();
 
 
-    
+
 }
