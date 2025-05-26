@@ -1,5 +1,3 @@
-package dataStructures.genericArrayList;
-
 public interface genericArrayListInterface<T> {
     // Basic Access
     T get(int index);

@@ -1,11 +1,9 @@
-package dataStructures.genericArrayList;
-
 public class genericArray<T> {
 
-    private Object[] data;
-    private int capacity;
+    private Object[] data; // In specifying a generic array, we must first allocate space in memory for the generic objects that will go inside.
+    private int capacity; // The capacity of the array.
 
-    public genericArray(int capacity) {
+    public genericArray(int capacity) { // Constructor for the genericArray class.
         if (capacity < 0) throw new IllegalArgumentException(
             "Capacity must be greater than 0"
         );
