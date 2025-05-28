@@ -1,4 +1,4 @@
-# Software Engineering Toolkit
+# Study
 
 A collection of code and concepts I believe every software engineer should be able to implement from memory. This isn’t about building huge systems—it's about mastering the foundational building blocks that make us better developers.
 
