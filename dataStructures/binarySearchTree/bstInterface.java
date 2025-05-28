@@ -1,5 +1,3 @@
-
-
 public interface bstInterface<T> {
 
     public boolean insert(T itemToInsert);

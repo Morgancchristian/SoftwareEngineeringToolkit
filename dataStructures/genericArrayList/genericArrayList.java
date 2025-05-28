@@ -39,4 +39,53 @@ public class genericArrayList<T> implements genericArrayListInterface<T> {
         }
         this.array.set(index, value);
     }
+    
+    @Override
+    public void add(T value) {
+        if (this.size == this.array.length()) {
+            this.array.resize(this.array.length() * 2);
+        }
+        this.array.set(this.size, value);
+        this.size++;
+    }
+    
+    @Override 
+    public void add(int index, T value){
+        if (index < 0 || index > this.size) {
+            throw new IllegalArgumentException("Index out of bounds");
+        }
+        if (this.size == this.array.length()) {
+            this.array.resize(this.array.length() * 2);
+        }
+        for (int i = this.size - 1; i >= index; i--) {
+            this.array.set(i + 1, this.array.get(i));
+        }
+        this.array.set(index, value);
+        this.size++;
+    }
+    
+    @Override
+    public T remove(int index) {
+        if (index >= this.size || index < 0) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+        T removed = this.array.get(index);
+        for (int i = index + 1; i < this.size; i++) {
+            this.array.set(i - 1, this.array.get(i));
+        }
+        this.array.set(this.size - 1, null);
+        this.size--;
+        return removed;
+    }
+    
+    @Override
+    public boolean remove(T value) {
+        for (int i = 0; i < this.size; i++) {
+            if (this.array.get(i).equals(value)) {
+                this.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }

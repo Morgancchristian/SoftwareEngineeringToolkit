@@ -1,5 +1,3 @@
-package dataStructures.binarySearchTree;
-
 public class bst<T extends Comparable<T>> {
 
     private treeNode<T> root;
